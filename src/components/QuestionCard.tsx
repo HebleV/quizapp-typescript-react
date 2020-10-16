@@ -4,7 +4,7 @@ type Props = {
     question: string,
     answers: string[],
     callback:any,
-    userAnswer: boolean,
+    userAnswer: any,
     questionNr: number,
     totalQuestions: number
 };
@@ -23,8 +23,8 @@ const QuestionCard: React.FC<Props> = ({
             <p dangerouslySetInnerHTML={{ __html : question}} />
             <div>
                 {answers.map(answer => (
-                    <div>
-                        <button disabled={userAnswer} onClick={callback}>
+                    <div key={answer}>
+                        <button disabled={userAnswer} value={answer} onClick={callback}>
                             <span dangerouslySetInnerHTML={{ __html: answer }} />
                         </button>
                     </div>
