@@ -5,11 +5,11 @@ This is a Quiz app built using ReactJS, Typescript & Styled Components.
 In the project directory, you can run:
 
 <details>
-    <summary>npm i</summary>
+    <summary style='font-weight:bold'>npm i</summary>
     <p>Installs all the dependencies</p>
 </details>
 
 <details>
-    <summary>npm start</summary>
+    <summary style='font-weight:bold'>npm start</summary>
     <p>It starts the app</p>
 </details>
