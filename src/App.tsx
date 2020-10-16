@@ -3,7 +3,7 @@ import { fetchQuizQuestions } from '../src/api';
 import QuestionCard from './components/QuestionCard';
 import { QuestionState, Difficulty } from './api';
 
-type AnswerObject = {
+export type AnswerObject = {
   question: string;
   answer: string;
   correct: boolean;
@@ -71,7 +71,7 @@ function App() {
         <button className='start' onClick={startQuiz}>Start Quiz</button>
       ) : null}
 
-      {!gameover ? <p className='score'>Score:</p> : null}
+      {!gameover ? <p className='score'>Score:{score}</p> : null}
       {loading && <p>Loading Questions...</p>}
       {!loading && !gameover && (
         <QuestionCard
